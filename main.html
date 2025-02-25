@@ -1,0 +1,496 @@
+<!-- This line is correct commenting for HTML -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grandma's Heavy Metal Festival</title>
+    <link rel="stylesheet" href="main.css"> <!-- Link to the CSS file -->
+    <link rel="icon" href="Unknown_pic.png" type="image/x-icon"> <!-- Link to the CSS file -->
+    <!-- Remember to always link your CSS file (i.e. the line above) in the <head> tags to effect the HTML code -->
+</head>
+<body> <!-- Code in the <body> tag controls the content on your Webpage -->
+       <!-- Remember you always link your Javascript file in the body -->
+
+
+    <!-- TOGGLE-SIDEBAR MENU -->
+    <input type="checkbox" id="toggle-sidebar" class="toggle-sidebar-checkbox">
+    <!-- We give this input tag an id name and a class name, so we can edit it in the CSS file -->
+    <!-- We set the input type to checkbox, which can be checked or unchecked by the user -->
+
+    <label for="toggle-sidebar" class="toggle-sidebar-button">&#9776;  Menu</label>
+    <!-- Created a label tag for the id="toggle-sidebar" -->
+    <!-- &#9776 is an HTML entity representing the "hamburger" menu icon (☰) along with the actual words Menu-->
+
+
+
+    <div class="sidebar-slider">
+        <ul id="sidebar-list"> <!-- The <ul> tags starts an unordered list element -->
+            <li><a href="">Community</a></li> <!-- The following <li> tags are list items within the unordered list-->
+            <li><a href="">Opportunities</a></li> <!-- The <a> tags are links to other pages labeled Home, About, Services, and Contact -->
+            <li><a href="">Guidelines</a></li>
+            <li><a href="">About/Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- HEADER TITLE ON WEBPAGE -->
+    <div id="header-title-content"> <!-- Created a <div> tag to contain our heading title -->
+        <!--<img class="stray-face" width="118" height="118" src="https://i.pinimg.com/736x/c6/b0/25/c6b025002165ff1b792755688b3cf42e.jpg" alt="Stray Eyes!">-->
+        <!-- This <img> tag contains the width & height modified, the src="img address", alt="Words displayed in case img doesn't load" -->
+        <div class="Tesla-title-section">
+            <h2 id="First-part">NOT</h2>
+            <img id="tesla-logo" width="180" height="180" src="https://www.logo.wine/a/logo/Tesla%2C_Inc./Tesla%2C_Inc.-Logomark-Black-Logo.wine.svg" alt="Tesla logo Black">
+            <h3 id="Second-part">TESLA</h3>
+        </div>
+    </div>
+
+    <!--
+        <img width="230" height="150" src="ImportPics/DarkFaceImg.png" alt="DarkImage">
+        <img width="150" height="150" src="https://i.ebayimg.com/images/g/9rsAAOSwFOpkZZ0r/s-l1200.webp" alt="Tesla logo White">
+    --> <!-- This commented out section withholds imgs possibly used in the future -->
+
+
+    <!-- THE HORIZONTAL NAVBAR UNDER THE HEADER TITLE -->
+    <div id="header-link-navbar">
+        <ul class="header-linked-list">
+            <li><a href="">Explore/Forum</a></li>
+            <li><a href="">Marketplace</a></li>
+            <li><a href="">Live Chat/FaQs</a></li>
+            <li><a href="">Media/Alumni Network</a></li>
+        </ul>
+    </div>
+
+    <!--https://static.wikia.nocookie.net/5c303dbe-323f-4e21-a98c-f73a08b20032/scale-to-width/755-->
+
+    <div class="image-container">
+        <img id="image1" class="image visible" width="118" height="118" src="https://i.pinimg.com/736x/c6/b0/25/c6b025002165ff1b792755688b3cf42e.jpg" alt="Image 1">
+        <img id="image2" class="image hidden" width="190" height="125" src="ImportIMGS/youtuber-pfp/DarkFaceImg.png" alt="Image 2">
+    </div>
+
+    <div> <!-- This div tag withholds the code to our toggle slider button -->
+        <label class="stray-face-switch"> <!-- Defines a clickable label -->
+            <input type="checkbox" id="stray-face-switch"> <!-- Use a checkbox to handle the toggle -->
+            <span class="stray-face-slider"></span> <!-- Custom slider UI -->
+        </label>
+    </div>
+
+    <script>
+        const toggleSwitch = document.getElementById('stray-face-switch');
+        const image1 = document.getElementById('image1');
+        const image2 = document.getElementById('image2');
+
+        toggleSwitch.addEventListener('change', () => { // Use 'change' event for checkbox
+            if (toggleSwitch.checked) {
+                image1.classList.remove('visible');
+                image1.classList.add('hidden');
+                image2.classList.remove('hidden');
+                image2.classList.add('visible');
+            } else {
+                image1.classList.remove('hidden');
+                image1.classList.add('visible');
+                image2.classList.remove('visible');
+                image2.classList.add('hidden');
+            }
+        });
+    </script>
+
+    <p id="LD-mode">LIGHT/DARK MODE</p> <!-- This <p> tag withholds all the text under the Stray-face-switch -->
+
+
+    <!-- HTML,CSS,JS Img <span style="--i:5;"><img width="100" height="100" src="https://www.pngitem.com/pimgs/m/519-5194865_html-css-js-html-5-hd-png-download.png" alt=""></span> -->
+
+    <div id="Mid-subtitle"> <!-- This is the Subtitle for the Webpage -->
+        <p>Random Things I Find Interesting</p>
+    </div>
+
+    <div class="Volley-word-container">
+        <span class="Basketball-letter">V</span>
+        <span class="Basketball-letter">o</span>
+        <span class="Basketball-letter">l</span>
+        <span class="Basketball-letter">l</span>
+        <span class="Basketball-letter">e</span>
+        <span class="Basketball-letter">y</span>
+        <span class="Basketball-letter">b</span>
+        <span class="Basketball-letter">a</span>
+        <span class="Basketball-letter">l</span>
+        <span class="Basketball-letter">l</span>
+    </div> <!-- This section/division withholds all the Basketball Subtitle scramble animation -->
+    <div id="Volley-content"> <!-- This section/division withholds all the Volleyball; textboxes, imgs,and animation -->
+        <p id="Volley-words"> Often overlooked in favor of more mainstream sports, volleyball holds a
+            unique charm that can captivate anyone who gives it a chance, at least that is my take.
+            The sport hasn't always been a beauty in my eyes. I found passion and an astonishing interest
+            around when college started for me. Unfortunately I wasn't in shape to take the competitive route, however
+            I will always try and take the chance to play recreational volleyball. P.S. it's way less competitive lmao.
+
+            The thrilling mix of strategy, agility, and teamwork makes it so amazing to watch and play.
+            Watching a high-level match, where athletes dive, spike, and block with incredible precision, can
+            be as exciting as any high-octane game out there anddd personally I think UCLA's Volleyball team does a
+            great job at that. At the end of the day, whether it's a casual beach game with friends or an intense
+            division match, volleyball promises an engaging experience. I challenge you to tune into a professional
+            volleyball game or better yet, grab a ball and head to the nearest court – you might just discover a
+            new favorite sport like me.
+        </p> <!-- This <p> tag withholds the textbox for the Volleyball content -->
+        <div id="Volley-imgs">
+            <img id="Volley-img1" width="280" height="180" src="https://res.cloudinary.com/scalefunder/image/fetch/s--kd6wfytA--/f_auto,fl_lossy,q_auto/https://res.cloudinary.com/scalefunder/image/upload/v1581264669/UCLA/wn4kqyl5ydfhrtexygms.jpg" alt="VolleyBall Img#1 didn't load???">
+            <img id="Volley-img2" width="350" height="225" src="https://usavolleyball.org/wp-content/uploads/2021/07/Team-Photo.jpg" alt="Volleyball Img#2 didn't load??">
+            <img id="Volley-img3" width="365" height="200" src="https://usavolleyball.org/wp-content/uploads/2021/07/7.26-USA-v-ROC-recap-cover.png" alt="Volleyball Img#3 didn't load??">
+            <img id="Volley-img4" width="250" height="170" src="https://s.yimg.com/ny/api/res/1.2/clXH3zKGeuxTf411JSYzJw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/cbc_sports_843/cb520b676495bcfa96c0ed286f85a370" alt="Volleyball Img#4 didn't load??">
+            <img id="Volley-img5" width="340" height="200" src="https://i.cbc.ca/1.6855915.1686779721!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/brie-king-volleyball.jpg" alt="Volleyball Img#5 didn't load??">
+        </div> <!-- This section/division withholds all the imgs in the Volleyball content -->
+    </div>
+
+    <div class="Basketball-word-container">
+        <span class="Basketball-letter">B</span>
+        <span class="Basketball-letter">a</span>
+        <span class="Basketball-letter">s</span>
+        <span class="Basketball-letter">k</span>
+        <span class="Basketball-letter">e</span>
+        <span class="Basketball-letter">t</span>
+        <span class="Basketball-letter">b</span>
+        <span class="Basketball-letter">a</span>
+        <span class="Basketball-letter">l</span>
+        <span class="Basketball-letter">l</span>
+    </div> <!-- This section/division withholds all the Basketball Subtitle scramble animation -->
+    <div id="Basketball-content"> <!-- This section/division withholds all the Basketball; textboxes, imgs,and animation -->
+        <p id="Basketball-words"> I found this sport at a very young age. As it is extremely
+            popular and thrilling from playing the sport to just watching for entertainment, it is
+            a unique blend of intricate strategy, athleticism, and most importantly fun. I've never
+            played for my school or anything competitively beyond that. As a shy and timid person
+            I notice the more serious and competitive you play a sport the bigger the crowd anddd
+            I'm not a fan of people...seriously 🫤. I've only played on Boys and Girls Club teams
+            and church teams. Sooo, growing up I've always played on teams where the focus is having
+            a fun time than rigorous competition. Playing basketball where fun is the genuine focus, that
+            is the basketball I prefer. Even though I was capable, I never dedicated, trained, and strived to
+            play competitively. I knew what it takes to stand out to competitive coaches and I decided
+            not to go down that route. I do give credit to the guys and girls that play on that level.
+            At the end of the day, whether you're watching professional athletes execute jaw-dropping dunks
+            and precise shots or joining a pick-up game at your local park, the energy is contagious. So I
+            recommend all to hit up a local court, and experience the fun.
+        </p> <!-- This <p> tag withholds the textbox for the Basketball content -->
+        <div id="Basketball-Imgs">
+            <img id="Basketball-img1" width="500" height="265" src="https://basketballforever.com/wp-content/uploads/2024/02/KD-Steph-LeBron-.jpg" alt="Basketball Image didn't load!">
+            <img id="Basketball-img2" width="400" height="215" src="https://media.gq.com/photos/62cc547e5d33ad5206122f34/16:9/w_2560%2Cc_limit/1407902707" alt="Basketball Image didn't load!">
+            <img id="Basketball-img3" width="308" height="225" src="https://www.si.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTg3ODg4OTc2MTM5Mzk2MTQ3/usatsi_17846425.jpg" alt="Basketball Image didn't load!">
+            <img id="Basketball-img4" width="250" height="165" src="https://cdn.vox-cdn.com/thumbor/LXHAu3gHqdfU4xqeu5ssXicnpfE=/0x0:3724x2483/1200x800/filters:focal(1698x439:2292x1033)/cdn.vox-cdn.com/uploads/chorus_image/image/66565261/1146816902.jpg.0.jpg" alt="Basketball Image didn't load!">
+            <img id="Basketball-img5" width="340" height="220" src="https://www.si.com/.image/t_share/MTkyOTQxNjAyNTA5OTU2ODE2/kd_and_kyrie_practice9.jpg" alt="Basketball Image didn't load!">
+        </div> <!-- This section/division withholds the imgs to the Basketball section -->
+    </div>
+
+    <div class="Coding-word-container">
+        <span class="Coding-letter">P</span>
+        <span class="Coding-letter">r</span>
+        <span class="Coding-letter">o</span>
+        <span class="Coding-letter">g</span>
+        <span class="Coding-letter">r</span>
+        <span class="Coding-letter">a</span>
+        <span class="Coding-letter">m</span>
+        <span class="Coding-letter">m</span>
+        <span class="Coding-letter">i</span>
+        <span class="Coding-letter">n</span>
+        <span class="Coding-letter">g</span>
+    </div> <!-- This section/division withholds all the Coding Subtitle scramble animation -->
+    <div class="Coding-content"> <!-- This section/division withholds all the Coding; textboxes, imgs,and animation -->
+        <p id="Coding-words"> Coding can be surprisingly fun, even when you're not focused on building
+        game-changing tech projects. The beauty of coding lies in its accessibility and the creativity
+        it unleashes. You can start small, experimenting with simple scripts that automate daily
+        tasks, or create fun, personal projects that reflect your interests and hobbies. The journey
+        of learning to code is as exciting as the destination, and it depends entirely on your approach
+        and who you learn from. Whether you're taking a structured course, watching online tutorials, or
+        collaborating with friends, the process can be incredibly rewarding. Explore the basics, play
+        around with code, and discover how enjoyable and fulfilling it can be to bring your ideas to life,
+        one line at a time.
+        </p> <!-- This <p> tag withholds the textbox for Coding content -->
+        <div class="Code-slider">
+            <span style="--i:1;"><img width="100" height="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/1200px-PyCharm_Icon.svg.png" alt=""></span>
+            <span style="--i:2;"><img width="120" height="120" src="https://static.vecteezy.com/system/resources/previews/027/127/463/original/javascript-logo-javascript-icon-transparent-free-png.png" alt=""></span>
+            <span style="--i:3;"><img width="120" height="120" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png" alt=""></span>
+            <span style="--i:4;"><img width="120" height="120" src="https://cdn0.iconfinder.com/data/icons/logos-brands-in-colors/128/react-512.png" alt=""></span>
+            <span style="--i:5;"><img width="90" height="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/911px-ISO_C%2B%2B_Logo.svg.png" alt=""></span>
+            <span style="--i:6;"><img width="170" height="170" src="https://editorconfig.org/logos/webStorm.png" alt=""></span>
+            <span style="--i:7;"><img width="100" height="100" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png" alt=""></span>
+            <span style="--i:8;"><img width="150" height="100" src="https://1000logos.net/wp-content/uploads/2022/07/Kubernetes-Logo.png" alt=""></span>
+            <!-- <img> tags are single tags that enable the ability to have images on your webpage -->
+            <!-- src="" inside the quotations is where you'll have the image address -->
+            <!-- alt="" inside the quotations is where you'll have descriptive text in case the image doesn't load -->
+        </div> <!-- This section/division withholds 3d-carousel containing various programming img icons -->
+    </div>
+
+    <div class="Minecraft-word-container"> <!-- This section/division withholds all the  -->
+
+
+        <span class="Minecraft-letter">M</span>
+        <span class="Minecraft-letter">i</span>
+        <span class="Minecraft-letter">n</span>
+        <span class="Minecraft-letter">e</span>
+        <span class="Minecraft-letter">c</span>
+        <span class="Minecraft-letter">r</span>
+        <span class="Minecraft-letter">a</span>
+        <span class="Minecraft-letter">f</span>
+        <span class="Minecraft-letter">t</span>
+    </div> <!-- This section/division withholds all the Minecraft Subtitle scramble animation -->
+    <div class="Minecraft-content"> <!-- This section/division withholds all the Minecraft; textboxes, imgs,and animation -->
+        <p id="Minecraft-words"> This phenomenal game is a playground for creativity, offering endless
+            possibilities that captivate players of all ages. The magic of Minecraft lies in its simplicity
+            and depth – from building elaborate structures and exploring vast landscapes to battling mobs and
+            crafting intricate redstone machines, there's something for everyone. You don't need to focus on
+            creating massive, game-changing projects to enjoy it; even small, personal creations can bring immense
+            satisfaction. The experience of playing Minecraft is unique for everyone, shaped by your imagination and
+            how you choose to engage with the game. Whether you're collaborating with friends on a grand city or
+            embarking on a solo survival adventure, Minecraft's charm never fades. I'd always recommend anyone to dive
+            in and explore the endless possibilities? Grab some blocks, start building, and discover why Minecraft is
+            beloved by millions around the world.
+        </p> <!-- This <p> tag withholds the textbox for Minecraft content -->
+        <div id="MC-Imgs">
+            <img id="Minecraft-img1" width="410" height="275" src="https://preview.redd.it/here-are-some-wallpapaer-i-made-fell-free-to-share-ideas-of-v0-7buzb5xztqhb1.png?width=640&crop=smart&auto=webp&s=58a2f1d72fb5cd016d68e74bcb6b2c35b95bb000" alt="Minecraft didn't load">
+            <img id="Minecraft-img2" width="430" height="265" src="https://png.pngtree.com/background/20230528/original/pngtree-landscape-minecraft-picture-image_2773439.jpg" alt="Minecraft didn't load">
+            <img id="Minecraft-img3" width="430" height="265" src="https://cdn.mos.cms.futurecdn.net/LhGUFiZ3y8QRxbkHztmVge-1200-80.jpg" alt="Minecraft didn't load">
+            <img id="Coral-Crafters-img4" width="430" height="265" src="https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/graphics/general/Minecraft_AquaticSkins.jpg?crop=185%2C0%2C800%2C500&wid=1640&hei=1025&scl=0.4878048780487805" alt="Coral Img didn't load">
+        </div>
+    </div>
+
+
+    <div>
+        <p id="Recognition">Now Presenting Your 2024 Award Winners</p>
+    </div>
+
+    <div>
+        <p id="Company-Recognition">Best Preforming Companies This Year</p>
+    </div>
+
+    <div>
+        <p id="YouTube-Recognition">YouTube's Top Leading Stars of The Year</p>
+    </div>
+
+    <div id="GrayStillPlays-content">
+        <img id="GrayStillPlays-img" width="200" height="200" src="ImportIMGS/youtuber-pfp/graystillplays.jpg" alt="GraysStillPlays didn't load.">
+        <div id="GSP-Text">
+            <p id="GSP-Textbox">GrayStillPlays</p>
+            <p id="GSP-Sub-count">7.8M subscribers</p>
+            <p id="GSP-Vid-count">3.6K videos</p>
+        </div>
+    </div>
+
+    <div id="aCookieGod-content">
+        <img id="aCookieGod-img" width="200" height="200" src="ImportIMGS/youtuber-pfp/cookiegod.jpg" alt="GraysStillPlays didn't load.">
+        <div id="ACG-Text">
+            <p id="ACG-Textbox">aCookieGod</p>
+            <p id="ACG-Sub-count">5.48M subscribers</p>
+            <p id="ACG-Vid-count">191 videos</p>
+        </div>
+    </div>
+
+    <div id="plaqueboymax-content">
+        <img id="plaqueboymax-img" width="200" height="200" src="ImportIMGS/youtuber-pfp/plaqueboymax.jpeg" alt="GraysStillPlays didn't load.">
+        <div id="PBM-Text">
+            <p id="PBM-Textbox">plaqueboymax</p>
+            <p id="PBM-Sub-count">504K subscribers</p>
+            <p id="PBM-Vid-count">700 videos</p>
+        </div>
+    </div>
+
+    <div id="Agent00everything-content">
+        <img id="Agent00everything-img" width="200" height="200" src="ImportIMGS/youtuber-pfp/agent00.jpeg" alt="GraysStillPlays didn't load.">
+        <div id="A00-Text">
+            <p id="A00-Textbox">Agent00everything</p>
+            <p id="A00-Sub-count">654K subscribers</p>
+            <p id="A00-Vid-count">2K videos</p>
+        </div>
+    </div>
+
+    <div id="wackyscience-content">
+        <img id="wackyscience-img" width="200" height="200" src="ImportIMGS/youtuber-pfp/wacksci.jpg" alt="GraysStillPlays didn't load.">
+        <div id="WS-Text">
+            <p id="WS-Textbox">Wacky Science</p>
+            <p id="WS-Sub-count">155K subscribers</p>
+            <p id="WS-Vid-count">6 videos</p>
+        </div>
+    </div>
+
+    <div id="jubilee-content">
+        <img id="jubilee-img" width="200" height="200" src="ImportIMGS/youtuber-pfp/jubilees.jpg" alt="GraysStillPlays didn't load.">
+        <div id="JBL-Text">
+            <p id="JBL-Textbox">jubilee</p>
+            <p id="JBL-Sub-count">8.48M subscribers</p>
+            <p id="JBL-Vid-count">1.2K videos</p>
+        </div>
+    </div>
+
+    <div id="DailyDoseOfInternet-content">
+        <img id="DailyDoseOfInternet-img" width="200" height="200" src="ImportIMGS/youtuber-pfp/dailydoses.jpg" alt="GraysStillPlays didn't load.">
+        <div id="DOI-Text">
+            <p id="DOI-Textbox">DailyDoseOfInternet</p>
+            <p id="DOI-Sub-count">18.5M subscribers</p>
+            <p id="DOI-Vid-count">1K videos</p>
+        </div>
+    </div>
+
+<div id="NotYourAverageFlight-content">
+    <img id="NotYourAverageFlight-img" width="200" height="200" src="ImportIMGS/youtuber-pfp/flightc.jpeg" alt="GraysStillPlays didn't load.">
+    <div id="NYAF-Text">
+        <p id="NYAF-Textbox">NotYourAverageFlight</p>
+        <p id="NYAF-Sub-count">4.54M subscribers</p>
+        <p id="NYAF-Vid-count">4.6K videos</p>
+    </div>
+</div>
+
+<div id="AlanBecker-content">
+    <img id="AlanBecker-img" width="200" height="200" src="ImportIMGS/youtuber-pfp/alanbeck.png" alt="GraysStillPlays didn't load.">
+    <div id="ALB-Text">
+        <p id="ALB-Textbox">alanbecker</p>
+        <p id="ALB-Sub-count">27.8M subscribers</p>
+        <p id="ALB-Vid-count">203 videos</p>
+    </div>
+</div>
+
+<div id="SuperMarioLogan-content">
+    <img id="SuperMarioLogan-img" width="200" height="200" src="ImportIMGS/youtuber-pfp/the-new-sml.webp" alt="GraysStillPlays didn't load.">
+    <div id="SML-Text">
+        <p id="SML-Textbox">SMLMovies</p>
+        <p id="SML-Sub-count">6.94M subscribers</p>
+        <p id="SML-Vid-count">433K videos</p>
+    </div>
+</div>
+
+<div id="NateJackson-content">
+    <img id="NateJackson-img" width="200" height="200" src="ImportIMGS/youtuber-pfp/natejack.jpg" alt="NateJackson Img didn't load.">
+    <div id="NTJ-Text">
+        <p id="NTJ-Textbox">NateJackson</p>
+        <p id="NTJ-Sub-count">483K subscribers</p>
+        <p id="NTJ-Vid-count">733 videos</p>
+    </div>
+</div>
+
+<div id="BestEverFoodReviewShow-content">
+    <img id="BestEverFoodReviewShow-img" width="200" height="200" src="ImportIMGS/youtuber-pfp/bestfoodman.jpg" alt="GraysStillPlays didn't load.">
+    <div id="BFR-Text">
+        <p id="BFR-Textbox">BestEverFoodReviewShow</p>
+        <p id="BFR-Sub-count">10.8M subscribers</p>
+        <p id="BFR-Vid-count">692 videos</p>
+    </div>
+</div>
+
+<div id="BayashiTV-content">
+    <img id="BayashiTV-img" width="200" height="200" src="ImportIMGS/youtuber-pfp/bayash.jpg" alt="GraysStillPlays didn't load.">
+    <div id="BTV-Text">
+        <p id="BTV-Textbox">BayashiTV</p>
+        <p id="BTV-Sub-count">26.7M subscribers</p>
+        <p id="BTV-Vid-count">1.3K videos</p>
+    </div>
+</div>
+
+<div id="CasvandePol-content">
+    <img id="CasvandePol-img" width="200" height="200" src="ImportIMGS/youtuber-pfp/casvandepol-img2.jpeg" alt="GraysStillPlays didn't load.">
+    <div id="CVS-Text">
+        <p id="CVS-Textbox">CasvandePol</p>
+        <p id="CVS-Sub-count">7.19M subscribers</p>
+        <p id="CVS-Vid-count">227 videos</p>
+    </div>
+</div>
+
+<div id="DokaRyan-content">
+    <img id="DokaRyan-img" width="200" height="200" src="ImportIMGS/youtuber-pfp/dothatryan.jpg" alt="GraysStillPlays didn't load.">
+    <div id="DKR-Text">
+        <p id="DKR-Textbox">DokaRyan</p>
+        <p id="DKR-Sub-count">2.56M subscribers</p>
+        <p id="DKR-Vid-count">680 videos</p>
+    </div>
+</div>
+
+<div id="kurzgesagt-content">
+    <img id="kurzgesagt-img" width="200" height="200" src="https://pbs.twimg.com/media/DjcdvktXcAAuiO0.jpg:large" alt="GraysStillPlays didn't load.">
+    <div id="KGT-Text">
+        <p id="KGT-Textbox">Kurzgesagt</p>
+        <p id="KGT-Sub-count">22.5M subscribers</p>
+        <p id="KGT-Vid-count">235 videos</p>
+    </div>
+</div>
+
+<!--<img id="pixy" width="300" height="100" src="https://i.imgflip.com/4juq6v.gif">-->
+
+    <!--
+    <img width="150" height="100" id="ham-face" src="https://i.redd.it/2mhrqnmb7s941.jpg" alt="HamsterDamn!">
+    --> <!-- Hamster Photo -->
+
+        <!--<input id="empty" placeholder="Type Username"/>-->
+        <!-- <input> tags default are set text, so you don't need to declare text i.e. type="text" -->
+        <!-- <input> tags are single tags(all content goes inside the enclosing pointers) -->
+
+        <!--<input id="filled" value="My name is Nick"/>-->
+        <!-- The value method will fill in the textbox with text that you include inside the quotations -->
+
+        <!--<input id="username" placeholder="Type Username"/>-->
+        <!-- Placeholder method will put hollow text in the textbox and will disappear when user-input is entered -->
+        <!-- Placeholders are used as brief instruction for user-input -->
+
+        <!--<input id="password" type="password" placeholder="Type Password"/>-->
+        <!-- type="password" will replace each character with black dots encoding what the user entered -->
+
+        <!--<input id="searcher" placeholder="Search Something..." type="search">-->
+
+
+    <!-- Udacity Link Practice -->
+        <!--<a href="http://udacity.com" target="_blank">Here's the link to Bombaclaat</a> -->
+        <!-- <a> tags are double tags in HTML-->
+        <!-- The href="" will go within the first <a> tag, but the textual content goes inside the enclosing <a> tags -->
+        <!-- <a> tags will create hyperlinks, which are essential for navigating from one web page to another -->
+        <!-- After the first <a> tag, type href="" and inside the quotations input the link destination -->
+
+
+    <!-- <script>
+        document.write("Hello World")
+    </script>
+    --> <!-- Random Javascript practice -->
+    <!--<div>
+        <img width="100" height="100" id="meme-face" src="https://image.spreadshirtmedia.com/image-server/v1/compositions/T23A1PA3989PT17X31Y47D1012908948W24934H20990/views/1,width=550,height=550,appearanceId=1,backgroundColor=FFFFFF,noPt=true/funny-meme-face-mens-longsleeve-shirt.jpg" alt="Stop looking at ME!">
+    </div>
+    --> <!-- Another meme face -->
+
+    <!--
+        <div id="Import-Vid-1">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FYW87OnMjy4?si=SCCNuwEGaLNS8Gtd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div id="Import-Vid-2">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DV1OqgHb3jc?si=RIp8xBw17iZUAo8R&amp;start=446" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+    --> <!-- How to Basic Imported Videos -->
+
+    <div class="carousel-container">
+        <div class="logos">
+            <div class="logos-slide">
+                <img class="apple-logo" width="260" height="145" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/apple_logo_icon_168588.png" alt="Apple Logo">
+                <img class="amazon-logo" width="410" height="400" src="https://get-picto.com/wp-content/uploads/2023/07/amazon-logo-png.webp" alt="Amazon Logo">
+                <img width="430" height="150" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png" alt="Google Logo">
+                <img class="nike-logo" width="300" height="300" src="https://pngfre.com/wp-content/uploads/nike-logo-18.png" alt="Nike Logo">
+                <img class="microsoft-logo" width="280" height="300" src="https://static.vecteezy.com/system/resources/thumbnails/027/127/493/small_2x/microsoft-logo-microsoft-icon-transparent-free-png.png" alt="Microsoft Logo">
+                <img class="schwab-logo" width="390" height="150" src="https://fortressassetmanagement.com/wp-content/uploads/2018/07/partner-logos-schwab.png" alt="Charles Schwab Logo">
+                <img class="cognizant-logo" width="415" height="250" src="https://dlt.mobi/wp-content/uploads/2021/03/cognizant-community-logo.png" alt="Cognizant Logo">
+                <img width="350" height="230" src="https://logos-world.net/wp-content/uploads/2020/11/Marriott-International-Logo.png" alt="Marriott Logo">
+                <img class="toast-logo" width="450" height="150" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Toast_logo.svg/2560px-Toast_logo.svg.png" alt="Toast Logo">
+                <img class="C3AI-logo" width="280" height="100" src="https://cdn.freelogovectors.net/wp-content/uploads/2022/09/c3-ai-logo-freelogovectors.net_.png" alt="C3Ai Logo">
+                <img class="fortra-logo" width="350" height="250" src="https://www.bloorresearch.com/wp-content/uploads/2019/09/Fortra-logo-x.png" alt="Fortra Logo">
+                <img width="650" height="170" src="https://www.clovertexas.com/wp-content/uploads/2020/11/clover-logo.png" alt="CloverTech Logo">
+            </div>
+
+            <div class="logos-slide">
+                <img class="apple-logo" width="260" height="145" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/apple_logo_icon_168588.png" alt="Apple Logo">
+                <img class="amazon-logo" width="410" height="400" src="https://get-picto.com/wp-content/uploads/2023/07/amazon-logo-png.webp" alt="Amazon Logo">
+                <img width="430" height="150" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png" alt="Google Logo">
+                <img class="nike-logo" width="300" height="300" src="https://pngfre.com/wp-content/uploads/nike-logo-18.png" alt="Nike Logo">
+                <img class="microsoft-logo" width="280" height="300" src="https://static.vecteezy.com/system/resources/thumbnails/027/127/493/small_2x/microsoft-logo-microsoft-icon-transparent-free-png.png" alt="Microsoft Logo">
+                <img class="schwab-logo" width="390" height="150" src="https://fortressassetmanagement.com/wp-content/uploads/2018/07/partner-logos-schwab.png" alt="CharlesSchwab Logo">
+                <img class="cognizant-logo" width="415" height="250" src="https://dlt.mobi/wp-content/uploads/2021/03/cognizant-community-logo.png" alt="Cognizant Logo">
+                <img width="350" height="230" src="https://logos-world.net/wp-content/uploads/2020/11/Marriott-International-Logo.png" alt="Marriott Logo">
+                <img class="toast-logo" width="450" height="150" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Toast_logo.svg/2560px-Toast_logo.svg.png" alt="Toast Logo">
+                <img class="C3AI-logo" width="280" height="100" src="https://cdn.freelogovectors.net/wp-content/uploads/2022/09/c3-ai-logo-freelogovectors.net_.png" alt="C3Ai Logo">
+                <img class="fortra-logo" width="350" height="250" src="https://www.bloorresearch.com/wp-content/uploads/2019/09/Fortra-logo-x.png" alt="Fortra Logo">
+                <img width="650" height="170" src="https://www.clovertexas.com/wp-content/uploads/2020/11/clover-logo.png" alt="CloverTech Logo">
+            </div>
+        </div>
+    </div> <!-- This section/division withholds the 2d-carousel containing Fortune 500 company logos -->
+    <!-- <script> document.write("\nschnitzel")</script> -->
+    <!-- This line prints text on the web screen-->
+</body>
+</html>

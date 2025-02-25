@@ -1,0 +1,1386 @@
+/* Surrounding content with forward slash and asterisks is correct commenting for CSS */
+
+
+
+/* THIS CONTROLS THE ENTIRE CONTENT OF THE WEBPAGE*/
+body {
+    height: 300vh; /* Ensures there's enough content to scroll */
+    overflow-x: hidden;
+    background-color: white;
+    background-attachment: fixed;
+    /* background: linear-gradient(to bottom, white, black); Gradient from white to black */
+}
+/* THIS CONTROLS THE ENTIRE CONTENT OF THE WEBPAGE*/
+
+
+
+
+@font-face {
+    font-family: 'Tesla';
+    src: url('fonts/TESLA.ttf') format('truetype');
+}
+
+
+@keyframes hoverAnimation {
+    0% {
+        background-color: transparent;
+        border-color: transparent;
+    }
+    100% {
+        background-color: transparent;
+        border-color: black; /* Change to desired border color */
+    }
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white; /* This handles the color of the background for the entire webpage */
+
+}
+
+.toggle-sidebar-checkbox {
+    display: none;
+}
+
+.toggle-sidebar-button {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 4; /* z-indexing layers your content so,(negative is to put under and positive is to put over) */
+    border-radius: 15px; /* border-radius will round the corners of your border */
+}
+
+.sidebar-slider {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    padding-top: 60px;
+    z-index: 3;
+
+    /* Refurbished Background below - Coming Soon... */
+    /* background: rgba(255, 255, 255, 0.2); |Semi-transparent background color| */
+    /* backdrop-filter: blur(10px); |Apply the blur effect| */
+    /* -webkit-backdrop-filter: blur(10px); */
+}
+
+.sidebar-slider ul {
+    position: relative;
+    list-style-type: none;
+    padding: 10px;
+    top: 20px;
+}
+
+#sidebar-list ul li {
+    margin-bottom: 20px;
+
+}
+
+
+.sidebar-slider ul li a {
+    margin-bottom: 10px;
+    color: white;
+    font-weight: lighter;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-size: 22px;
+    padding: 15px 20px;
+    display: block;
+    border-radius: 15px;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+
+.sidebar-slider ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+#toggle-sidebar:checked ~ .sidebar-slider {
+    width: 250px;
+}
+
+
+.main-content {
+    margin-right: 0;
+    padding: 20px;
+    transition: margin-right 0.5s ease;
+}
+
+#toggle-sidebar:checked ~ .main-content {
+    margin-right: 250px;
+}
+
+h1 {
+    color: red;
+    font-weight: 800;
+    text-align: center;
+    padding: 20px 0;
+    pointer-events: none;
+}
+
+
+
+#header-title-content {
+    position: relative;
+    left: 130px;
+}
+
+
+
+
+.Tesla-title-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin-left: 280px; /* This will move the Tesla logo left and right */
+}
+
+
+h2, h3 {
+    /* background-color: bisque; */
+    font-size: 60px;
+    font-weight: normal;
+    font-family: Tesla, sans-serif;
+    text-align: center;
+    /* font-family: "BlinkMacSystemFont", sans-serif; APPLE FONT (SAVE FOR LATER) */
+    /* position: fixed; -- Positioning to fixed will make the item stay visible to the user as you scroll*/
+}
+
+
+
+
+#tesla-logo {
+    margin-top: 20px;
+}
+
+
+
+
+/* STRAY-FACE SWITCH */
+
+.image-container {
+    position: relative;
+    left: 120px;
+    bottom: 210px;
+}
+
+.image {
+    position: absolute;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.image.visible {
+    opacity: 1;
+}
+
+.image.hidden {
+    opacity: 0;
+}
+
+.stray-face-switch {
+    display: inline-block;
+    left: 130px;
+    bottom: 30px;
+    width: 60px;
+    height: 34px;
+    position: relative;
+}
+
+.stray-face-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.stray-face-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: lightsteelblue;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.stray-face-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .stray-face-slider {
+    background-color: lightpink;
+}
+
+input:checked + .stray-face-slider:before {
+    transform: translateX(26px);
+}
+/* STRAY-FACE SWITCH */
+
+
+
+#LD-mode {
+    position: relative;
+    left: 115px;
+    bottom: 15px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-size: 10px;
+}
+
+
+#header-link-navbar{
+    background-color: transparent;
+    margin-top: 30px;
+    /* height: 35px; */
+}
+
+.header-linked-list {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox to make the list horizontal */
+    justify-content: center; /* Center the navigation list */
+    /* scroll-margin: 70px; */
+}
+
+.header-linked-list a {
+    margin: 20px;
+    font-family: "Apple SD Gothic Neo", sans-serif;
+    padding: 15px 25px; /* Add padding around the links */
+    color: black;
+    text-decoration: none; /* Remove underline from links */
+    text-align: center;
+    background-color: transparent;
+    transition: 0.2s ease-in;
+}
+
+.header-linked-list a:hover {
+    background-color: transparent; /* Change background on hover */
+    border-radius: 50px;
+    border-width: thick;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.4s ease-in-out;
+    /*transition: transform 0.3s ease-in-out;*/
+    /*animation: hoverAnimation 0.5s forwards;*/
+}
+
+
+
+/* MID TITLE SECTION */
+#Mid-subtitle {
+    position: relative;
+    top: 100px; /* Top attribute will put space between the content and the top part of the margin, making the content appear lower on the screen */
+    font-family: "Avenir Next", sans-serif;
+    font-size: 50px;
+    font-weight: normal;
+    left: 75px;
+}
+/* MID TITLE SECTION */
+
+
+
+
+
+.Volley-word-container {
+    font-family: "Avenir Next", sans-serif;
+    position: relative;
+    display: inline-block;
+    cursor: grab;
+    left: 215px;
+    bottom: -185px;
+}
+
+.Basketball-letter {
+    display: inline-block;
+    transition: transform 0.5s ease;
+    font-size: 3rem;
+}
+
+.Volley-word-container:hover .Basketball-letter:nth-child(1) {
+    transform: translate(-20px, -20px) rotate(-15deg);
+}
+
+.Volley-word-container:hover .Basketball-letter:nth-child(2) {
+    transform: translate(20px, -10px) rotate(20deg);
+}
+
+.Volley-word-container:hover .Basketball-letter:nth-child(3) {
+    transform: translate(-10px, 20px) rotate(-25deg);
+}
+
+.Volley-word-container:hover .Basketball-letter:nth-child(4) {
+    transform: translate(10px, -30px) rotate(30deg);
+}
+
+.Volley-word-container:hover .Basketball-letter:nth-child(5) {
+    transform: translate(30px, 10px) rotate(-10deg);
+}
+
+
+.Volley-word-container:hover .Basketball-letter:nth-child(6) {
+    transform: translate(-20px, -20px) rotate(-15deg);
+}
+
+.Volley-word-container:hover .Basketball-letter:nth-child(7) {
+    transform: translate(20px, -10px) rotate(20deg);
+}
+
+.Volley-word-container:hover .Basketball-letter:nth-child(8) {
+    transform: translate(-10px, 20px) rotate(-25deg);
+}
+
+.Volley-word-container:hover .Basketball-letter:nth-child(9) {
+    transform: translate(10px, -30px) rotate(30deg);
+}
+
+.Volley-word-container:hover .Basketball-letter:nth-child(10) {
+    transform: translate(30px, 10px) rotate(-10deg);
+}
+
+
+
+
+/* SECTION WITH VOLLEYBALL CONTENT */
+#Volley-words {
+    /* display: flex; */
+    position: relative;
+    left: 30px;
+    bottom: -200px;
+    font-family: "Avenir Next", sans-serif;
+    font-size: 22px;
+    font-weight: lighter;
+    width: 550px;
+    margin-left: 25px;
+    padding: 18px;
+    background: white;
+    border: 3px solid lightgray;
+    border-radius: 15px;
+    transition: all 0.4s ease-in-out;
+    /*transform: translateX(0);*/
+    /*transition: transform 0.3s ease-in-out;*/
+}
+
+#Volley-words:hover {
+    background-color: transparent;
+    border: 3px solid black;
+    box-shadow: 0px 0px 35px 2px gray;
+    transform: scale(1.05);
+    cursor: url('cursors/VolleyBaller.png'), pointer;
+    /*animation: hoverEffect 0.3s forwards;*/
+    /* transform: translateX(10px); This will move it over horizontally (negative goes and positive goe right) */
+}
+
+#Volley-img1 {
+    position: relative;
+    left: 1080px;
+    bottom: 280px;
+    border-radius: 20px;
+    /* transition: transform 0.2s ease-in-out; */
+    /* transform: scale(1.20); */
+}
+
+#Volley-img2 {
+    position: relative;
+    left: 385px;
+    bottom: 275px;
+    border-radius: 20px;
+}
+
+#Volley-img3 {
+    position: relative;
+    left: 230px;
+    bottom: 540px;
+    border-radius: 20px;
+}
+
+
+#Volley-img4 {
+    position: relative;
+    left: 70px;
+    bottom: 50px;
+    border-radius: 20px;
+}
+
+
+#Volley-img5 {
+    position: relative;
+    left: 700px;
+    bottom: 230px;
+    border-radius: 20px;
+}
+/* SECTION WITH VOLLEYBALL CONTENT */
+
+
+
+.Basketball-word-container {
+    font-family: "Avenir Next", sans-serif;
+    position: relative;
+    display: inline-block;
+    cursor: grab;
+    left: 970px;
+    bottom: 70px;
+}
+
+.Basketball-letter {
+    display: inline-block;
+    transition: transform 0.5s ease;
+    font-size: 3rem;
+}
+
+.Basketball-word-container:hover .Basketball-letter:nth-child(1) {
+    transform: translate(-20px, -20px) rotate(-15deg);
+}
+
+.Basketball-word-container:hover .Basketball-letter:nth-child(2) {
+    transform: translate(20px, -10px) rotate(20deg);
+}
+
+.Basketball-word-container:hover .Basketball-letter:nth-child(3) {
+    transform: translate(-10px, 20px) rotate(-25deg);
+}
+
+.Basketball-word-container:hover .Basketball-letter:nth-child(4) {
+    transform: translate(10px, -30px) rotate(30deg);
+}
+
+.Basketball-word-container:hover .Basketball-letter:nth-child(5) {
+    transform: translate(30px, 10px) rotate(-10deg);
+}
+
+
+.Basketball-word-container:hover .Basketball-letter:nth-child(6) {
+    transform: translate(-20px, -20px) rotate(-15deg);
+}
+
+.Basketball-word-container:hover .Basketball-letter:nth-child(7) {
+    transform: translate(20px, -10px) rotate(20deg);
+}
+
+.Basketball-word-container:hover .Basketball-letter:nth-child(8) {
+    transform: translate(-10px, 20px) rotate(-25deg);
+}
+
+.Basketball-word-container:hover .Basketball-letter:nth-child(9) {
+    transform: translate(10px, -30px) rotate(30deg);
+}
+
+.Basketball-word-container:hover .Basketball-letter:nth-child(10) {
+    transform: translate(30px, 10px) rotate(-10deg);
+}
+
+
+
+/* SECTION WITH BASKETBALL CONTENT */
+#Basketball-words { /* Targets the id="Basketball-words" in the HTML file */
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: 790px; /* You can manipulate by % or pixels (i.e. 35% or 35px) */
+    bottom: 50px;
+    font-family: "Avenir Next", sans-serif;
+    font-size: 22px;
+    font-weight: lighter;
+    width: 550px;
+    margin-left: 25px;
+    padding: 18px;
+    background: white;
+    border: 3px solid lightgray;
+    border-radius: 15px;
+    transition: all 0.4s ease-in-out ;
+    /*transform: translateX(0);*/
+    /*transition: transform 0.3s ease-in-out;*/
+}
+
+#Basketball-words:hover {
+    background-color: transparent;
+    border: 3px solid black;
+    box-shadow: 0px 0px 35px 2px gray;
+    transform: scale(1.05);
+    cursor: url('cursors/court.png'), pointer;
+    /*animation: hoverEffect 0.3s forwards;*/
+    /* transform: translateX(10px); This will move it over horizontally (negative goes and positive goe right) */
+}
+
+#Basketball-img1 { /* Img of KD, LeBron, and Curry in the HTML file */
+    position: relative;
+    margin-left: 45px;
+    left: 70px;
+    bottom: 830px;
+    border-radius: 20px;
+}
+
+#Basketball-img2 { /* Img of Aja, Candace, Kelsey and the WNBA All-stars in the HTML file */
+    position: relative;
+    margin-left: 45px;
+    left: -215px;
+    bottom: 570px;
+    border-radius: 20px;
+}
+
+#Basketball-img3 { /* Img of Aleksej Pokuševski in the HTML file */
+    position: relative;
+    margin-left: 45px;
+    left: -1000px;
+    bottom: 550px;
+    border-radius: 20px;
+}
+
+#Basketball-img4 { /* Img of Giannis & Jayson Tatum in the HTML file */
+    position: relative;
+    margin-left: 45px;
+    left: 50px;
+    bottom: 565px;
+    border-radius: 20px;
+}
+
+#Basketball-img5 { /* Img of Kyrie & KD in the HTML file */
+    position: relative;
+    margin-left: 45px;
+    left: 60px;
+    bottom: 530px;
+    border-radius: 20px;
+}
+/* SECTION WITH BASKETBALL CONTENT */
+
+
+
+.Coding-word-container {
+    font-family: "Avenir Next", sans-serif;
+    position: relative;
+    display: inline-block;
+    cursor: grab;
+    left: 180px;
+    bottom: 380px;
+}
+
+.Coding-letter {
+    display: inline-block;
+    transition: transform 0.5s ease;
+    font-size: 3rem;
+}
+
+.Coding-word-container:hover .Coding-letter:nth-child(1) {
+    transform: translate(-20px, -20px) rotate(-15deg);
+}
+
+.Coding-word-container:hover .Coding-letter:nth-child(2) {
+    transform: translate(20px, -10px) rotate(20deg);
+}
+
+.Coding-word-container:hover .Coding-letter:nth-child(3) {
+    transform: translate(-10px, 20px) rotate(-25deg);
+}
+
+.Coding-word-container:hover .Coding-letter:nth-child(4) {
+    transform: translate(10px, -30px) rotate(30deg);
+}
+
+.Coding-word-container:hover .Coding-letter:nth-child(5) {
+    transform: translate(30px, 10px) rotate(-10deg);
+}
+
+
+.Coding-word-container:hover .Coding-letter:nth-child(6) {
+    transform: translate(-20px, -20px) rotate(-15deg);
+}
+
+.Coding-word-container:hover .Coding-letter:nth-child(7) {
+    transform: translate(20px, -10px) rotate(20deg);
+}
+
+.Coding-word-container:hover .Coding-letter:nth-child(8) {
+    transform: translate(-10px, 20px) rotate(-25deg);
+}
+
+.Coding-word-container:hover .Coding-letter:nth-child(9) {
+    transform: translate(10px, -30px) rotate(30deg);
+}
+
+.Coding-word-container:hover .Coding-letter:nth-child(10) {
+    transform: translate(30px, 10px) rotate(-10deg);
+}
+
+.Coding-word-container:hover .Coding-letter:nth-child(11) {
+    transform: translate(30px, 10px) rotate(-30deg);
+}
+
+
+
+/* SECTION WITH CODING CONTENT */
+#Coding-words { /* Targets the id="Coding-words" in the HTML file */
+    display: flex;
+    position: relative;
+    bottom: 350px;
+    font-family: "Avenir Next", sans-serif;
+    font-size: 22px;
+    font-weight: lighter; /* Font-weight focuses on the thickness of the font |Font-weight: lighter, normal, bold, and bolder| */
+    width: 650px; /* Width controls how wide the element can be */
+    left: 55px; /* Left property will move elements to the right */
+    padding: 18px; /* This creates space between the element's content and its border */
+    background: white; /* This will make the background of the element */
+    border: 3px solid lightgray; /* This respectively sets the; border thickness, border type, border color */
+    border-radius: 15px; /* This controls the border roundness on the corners */
+    transition: all 0.4s ease-in-out ; /* This will smoothly transition all the properties, taking it 0.4secs to start & finish */
+    /*transform: translateX(0);*/
+    /*transition: transform 0.3s ease-in-out;*/
+}
+
+#Coding-words:hover {
+    background-color: transparent; /* This will make the background of the element transparent */
+    border: 3px solid black; /* When hovered this will transition to a 3px solid border that's black */
+    box-shadow: 0px 0px 35px 2px gray;
+    transform: scale(1.05);
+    cursor: url('cursors/commputer.png'), pointer; /* The url img will appear as the cursor, if not available the pointer will enable */
+    /* animation: hoverEffect 0.3s forwards; */
+    /* transform: translateX(10px); This will move it over horizontally (negative goes and positive goe right) */
+}
+
+
+.Code-slider {
+    position: relative;
+    left: 950px;
+    bottom: 670px;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100% {
+
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.Code-slider span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(200px);
+}
+
+.Code-slider span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+
+.Code-slider span:nth-child(3) img {
+    border-radius: 0px;  /* Add a red border for example */
+}
+
+
+.Code-slider span:hover img {
+    transform: translateY(-50px) scale(1.2);
+}
+
+
+/* SECTION WITH CODING CONTENT */
+
+
+
+
+.Minecraft-word-container {
+    font-family: "Avenir Next", sans-serif;
+    position: relative;
+    display: inline-block;
+    cursor: grab;
+    left: 570px;
+    bottom: 380px;
+}
+
+.Minecraft-letter {
+    display: inline-block;
+    transition: transform 0.5s ease;
+    font-size: 3rem;
+}
+
+.Minecraft-word-container:hover .Minecraft-letter:nth-child(1) {
+    transform: translate(-20px, -20px) rotate(-15deg);
+}
+
+.Minecraft-word-container:hover .Minecraft-letter:nth-child(2) {
+    transform: translate(20px, -10px) rotate(20deg);
+}
+
+.Minecraft-word-container:hover .Minecraft-letter:nth-child(3) {
+    transform: translate(-10px, 20px) rotate(-25deg);
+}
+
+.Minecraft-word-container:hover .Minecraft-letter:nth-child(4) {
+    transform: translate(10px, -30px) rotate(30deg);
+}
+
+.Minecraft-word-container:hover .Minecraft-letter:nth-child(5) {
+    transform: translate(30px, 10px) rotate(-10deg);
+}
+
+
+.Minecraft-word-container:hover .Minecraft-letter:nth-child(6) {
+    transform: translate(-20px, -20px) rotate(-15deg);
+}
+
+.Minecraft-word-container:hover .Minecraft-letter:nth-child(7) {
+    transform: translate(20px, -10px) rotate(20deg);
+}
+
+.Minecraft-word-container:hover .Minecraft-letter:nth-child(8) {
+    transform: translate(-10px, 20px) rotate(-25deg);
+}
+
+.Minecraft-word-container:hover .Minecraft-letter:nth-child(9) {
+    transform: translate(10px, -30px) rotate(30deg);
+}
+
+
+/* SECTION WITH MINECRAFT CONTENT */
+#Minecraft-words { /* Targets the id="Minecraft-words" in the HTML file */
+    display: flex;
+    position: relative; /* Position relative allows you to use 'top', 'right', 'bottom', and 'left' to adjust its position */
+    bottom: 350px; /* Bottom property will move elements up from original position */
+    left: 470px; /* Left property will move elements to the right */
+    font-family: "Avenir Next", sans-serif; /* Font-family will set the font to "Avenir Next" and if not available the backup will be sans-serif */
+    font-size: 20px; /* This sets the font size to a medium |Font-sizes: small, medium, and large| */
+    font-weight: lighter; /* Font-weight focuses on the thickness of the font |Font-weight: lighter, normal, bold, and bolder| */
+    width: 400px; /* Width controls how wide the element can be */
+    margin-left: 25px; /* This will create space on the left side of the element */
+    padding: 18px; /* This creates space between the element's content and its border */
+    background: white; /* This will make the background of the element white */
+    border: 3px solid lightgray; /* This respectively sets the; border thickness, border type, border color */
+    border-radius: 15px; /* This controls the border roundness on the corners */
+    transition: all 0.4s ease-in-out; /* This will smoothly transition all the properties, taking it 0.4secs to start & finish */
+}
+
+#Minecraft-words:hover { /* We select & apply the :hover for whenever the user-mouse hovers over it */
+    box-shadow: 0px 0px 35px 2px gray; /* This adds a shadow effect */
+    transform: scale(1.05);
+    background-color: transparent; /* When hovered the background-color changes to transparent */
+    border: 3px solid black; /* This changes to a 3px-solid black border when hovered */
+    cursor: url('cursors/Webp.net-resizeimage.png'), pointer; /* The url img will appear as the cursor, if not available the pointer will enable */
+    /*animation: hoverEffect 0.3s forwards;*/
+    /* transform: translateX(10px); This will move it over horizontally (negative goes and positive goe right) */
+}
+
+#Minecraft-img1 { /* Imported Minecraft Img in the HTML file */
+    position: relative; /* Position relative allows you to make adjustments to; 'top', 'right', 'bottom', and 'left' */
+    border-radius: 20px; /* This controls the border roundness on the corners */
+    bottom: 1000px; /* Bottom property will move elements up from original position */
+    left: 40px; /* This allows you to move the element to the right */
+}
+
+#Minecraft-img2 { /* Imported Minecraft Img in the HTML file */
+    position: relative; /* Position relative allows you to make adjustments to; 'top', 'right', 'bottom', and 'left' */
+    border-radius: 20px; /* This controls the border roundness on the corners */
+    bottom: 1000px; /* Bottom property will move elements up from original position */
+    left: 530px; /* This allows you to move the element to the right */
+}
+
+
+#Minecraft-img3 { /* Imported Minecraft Img in the HTML file */
+    position: relative; /* Position relative allows you to make adjustments to; 'top', 'right', 'bottom', and 'left' */
+    border-radius: 20px; /* This controls the border roundness on the corners */
+    bottom: 660px; /* Bottom property will move elements up from original position */
+    left: -815px; /* This allows you to move the element to the right */
+}
+
+
+#Coral-Crafters-img4 { /* Imported Minecraft Img in the HTML file */
+    position: relative; /* Position relative allows you to make adjustments to; 'top', 'right', 'bottom', and 'left' */
+    border-radius: 20px; /* This controls the border roundness on the corners */
+    bottom: 930px; /* Bottom property will move elements up from original position */
+    left: 940px; /* This allows you to move the element to the right */
+}
+/* SECTION WITH MINECRAFT CONTENT */
+
+
+#Recognition {
+    position: relative;
+    display: flex;
+    padding: 25px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: bold;
+    font-size: 120px;
+    bottom: 550px;
+    width: 1000px;
+    color: rgba(0, 0, 0, 0.4);
+    background-color: aliceblue;
+    box-shadow: 0px 0px 80px 2px lightsteelblue;
+    /* background-color: honeydew; */
+
+}
+
+#Company-Recognition {
+    position: relative;
+    z-index: 5;
+    bottom: 370px;
+    left: 50px;
+    font-weight: bold;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-size: 35px;
+    opacity: 0.7;
+    color: black;
+}
+
+#YouTube-Recognition {
+    position: relative;
+    z-index: 5;
+    left: 50px;
+    bottom: -250px;
+    font-weight: bold;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-size: 32px;
+    opacity: 0.7;
+    color: black;
+}
+
+#GrayStillPlays-img {
+    position: relative;
+    border-radius: 100px;
+    bottom: -375px;
+    left: 100px;
+    border: 5px solid lightgray;
+}
+
+#GSP-Text {
+    position: relative;
+    bottom: -400px;
+    left: 145px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: black;
+    opacity: 0.9;
+}
+
+#GSP-Text p {
+    padding: 5px;
+}
+
+/* aCookieGod CONTENT */
+#aCookieGod-img {
+    position: relative;
+    border-radius: 100px;
+    bottom: -78px;
+    left: 380px;
+    border: 5px solid lightgray;
+}
+
+#ACG-Text {
+    position: relative;
+    bottom: -102px;
+    left: 427px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: black;
+    opacity: 0.9;
+}
+
+#ACG-Text p {
+    padding: 5px;
+}
+
+
+#plaqueboymax-img {
+    position: relative;
+    border-radius: 100px;
+    bottom: 217px;
+    left: 672px;
+    border: 5px solid lightgray;
+}
+
+#PBM-Text {
+    position: relative;
+    bottom: 190px;
+    left: 710px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: black;
+    opacity: 0.9;
+}
+
+#PBM-Text p {
+    padding: 5px;
+}
+
+
+#Agent00everything-img {
+    position: relative;
+    border-radius: 100px;
+    bottom: 510px;
+    left: 972px;
+    border: 5px solid lightgray;
+}
+
+#A00-Text {
+    position: relative;
+    bottom: 485px;
+    left: 1000px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: black;
+    opacity: 0.9;
+}
+
+#A00-Text p {
+    padding: 5px;
+}
+
+#wackyscience-img {
+    position: relative;
+    border-radius: 100px;
+    bottom: 375px;
+    left: 100px;
+    border: 5px solid lightgray;
+}
+
+#WS-Text {
+    position: relative;
+    bottom: 350px;
+    left: 145px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: black;
+    opacity: 0.9;
+}
+
+#WS-Text p {
+    padding: 5px;
+}
+
+
+
+#jubilee-img {
+    position: relative;
+    border-radius: 100px;
+    bottom: 670px;
+    left: 380px;
+    border: 5px solid lightgray;
+}
+
+#JBL-Text {
+    position: relative;
+    bottom: 650px;
+    left: 427px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: black;
+    opacity: 0.9;
+}
+
+#JBL-Text p {
+    padding: 5px;
+}
+
+
+#DailyDoseOfInternet-img {
+    position: relative;
+    border-radius: 100px;
+    bottom: 970px;
+    left: 672px;
+    border: 5px solid lightgray;
+}
+
+#DOI-Text {
+    position: relative;
+    bottom: 940px;
+    left: 710px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: black;
+    opacity: 0.9;
+}
+
+#DOI-Text p {
+    padding: 5px;
+}
+
+
+#NotYourAverageFlight-img {
+    position: relative;
+    border-radius: 100px;
+    bottom: 1275px;
+    left: 972px;
+    border: 5px solid lightgray;
+}
+
+#NYAF-Text {
+    position: relative;
+    bottom: 1250px;
+    left: 1000px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: black;
+    opacity: 0.9;
+}
+
+#NYAF-Text p {
+    padding: 5px;
+}
+
+
+#AlanBecker-img {
+    position: relative;
+    border-radius: 100px;
+    bottom: 1175px;
+    left: 100px;
+    border: 5px solid lightgray;
+}
+
+#ALB-Text {
+    position: relative;
+    bottom: 1140px;
+    left: 145px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: black;
+    opacity: 0.9;
+}
+
+#ALB-Text p {
+    padding: 5px;
+}
+
+#SuperMarioLogan-img {
+    position: relative;
+    border-radius: 100px;
+    bottom: 1475px;
+    left: 380px;
+    border: 5px solid lightgray;
+}
+
+#SML-Text {
+    position: relative;
+    bottom: 1435px;
+    left: 427px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: black;
+    opacity: 0.9;
+}
+
+#SML-Text p {
+    padding: 5px;
+}
+
+#NateJackson-img {
+    position: relative;
+    border-radius: 100px;
+    bottom: 1770px;
+    left: 672px;
+    border: 5px solid lightgray;
+}
+
+#NTJ-Text {
+    position: relative;
+    bottom: 1730px;
+    left: 710px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: black;
+    opacity: 0.9;
+}
+
+#NTJ-Text p {
+    padding: 5px;
+}
+
+#BestEverFoodReviewShow-img {
+    position: relative;
+    border-radius: 100px;
+    bottom: 2060px;
+    left: 972px;
+    border: 5px solid lightgray;
+}
+
+#BFR-Text {
+    position: relative;
+    bottom: 2030px;
+    left: 1000px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: black;
+    opacity: 0.9;
+}
+
+#BFR-Text p {
+    padding: 5px;
+}
+
+#BayashiTV-img {
+    position: relative;
+    border-radius: 100px;
+    bottom: 2000px;
+    left: 100px;
+    border: 5px solid lightgray;
+}
+
+#BTV-Text {
+    position: relative;
+    bottom: 1965px;
+    left: 145px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: black;
+    opacity: 0.9;
+}
+
+#BTV-Text p {
+    padding: 5px;
+}
+
+
+
+
+#CasvandePol-img {
+    position: relative;
+    border-radius: 100px;
+    bottom: 2295px;
+    left: 380px;
+    border: 5px solid lightgray;
+}
+
+#CVS-Text {
+    position: relative;
+    bottom: 2260px;
+    left: 427px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: black;
+    opacity: 0.9;
+}
+
+#CVS-Text p {
+    padding: 5px;
+}
+
+
+
+#DokaRyan-img {
+    position: relative;
+    border-radius: 100px;
+    bottom: 2590px;
+    left: 672px;
+    border: 5px solid lightgray;
+}
+
+#DKR-Text {
+    position: relative;
+    bottom: 2560px;
+    left: 710px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: black;
+    opacity: 0.9;
+}
+
+#DKR-Text p {
+    padding: 5px;
+}
+
+
+#kurzgesagt-img {
+    position: relative;
+    border-radius: 100px;
+    bottom: 2895px;
+    left: 972px;
+    border: 5px solid lightgray;
+}
+
+#KGT-Text {
+    position: relative;
+    bottom: 2865px;
+    left: 1000px;
+    font-family: "BlinkMacSystemFont", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    color: black;
+    opacity: 0.9;
+}
+
+#KGT-Text p {
+    padding: 5px;
+}
+
+
+input { /* This will target all input tags in the HTML file */
+    width: 250px; /* Sets the width of the input boxes */
+    padding: 6px; /* Padding creates spacing between the content and the border */
+    margin: 10px 0; /* Margins creates spacing between the border and the page */
+    border: 4px solid #ccc; /* Border created 4 lines surrounding the content */
+    border-radius: 10px; /* Border-radius wil make the corners of the input boxes rounded */
+    font-size: 18px; /* Set the font size of the text inside the input boxes */
+}
+
+#username { /* Selects the id="username" in the HTML file */
+    font-family: Optima, sans-serif;
+    border-color: black; /* Set a different border color */
+    background-color: burlywood; /* Set a background color */
+    font-size: 18px; /* Set the font size of the text inside the input boxes */
+
+}
+
+#password { /* Selects the id="password" in the HTML file */
+    border-color: black; /* Set a different border color */
+    background-color: burlywood; /* Set a background color */
+    font-size: 18px; /* Set the font size of the text inside the input boxes */
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border-sizing: border-box;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0); /* TransX is left/right, TransY is up/down, and TransZ is rotating */
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.carousel-container {
+    position: relative; /* Ensure gradient overlays are relative to this container */
+    overflow: hidden; /* Hide any overflow */
+    bottom: 5280px;
+    padding: 60px 0;
+}
+
+.logos {
+    overflow: hidden;
+    padding: 60px 0; /* Two value its top/bottom and second its left/right */
+    align-content: center;
+    justify-content: center;
+    background: white;
+    white-space: nowrap;
+}
+
+/*
+.logos:hover  .logos-slide {
+    animation-play-state: paused;
+}
+*/
+
+.logos:before,
+.logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+/*
+.logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), whitesmoke);
+}*/
+
+/*
+.logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), whitesmoke);
+}*/
+
+.logos-slide {
+    display: inline-block;
+    animation: 28s slide infinite linear;
+}
+
+.logos-slide img {
+    align-content: center;
+    justify-content: center;
+    margin: 0 40px;
+}
+
+.apple-logo {
+    transform: translateY(-20px);
+}
+
+.amazon-logo {
+    transform: translateY(100px);
+}
+
+.nike-logo {
+    transform: translateY(40px);
+}
+
+.schwab-logo {
+    transform: translateY(-30px);
+}
+
+.toast-logo {
+    transform: translateY(-20px);
+}
+
+.C3AI-logo {
+    transform: translateY(-40px);
+}
+
+.microsoft-logo, .fortra-logo, .cognizant-logo {
+    /*margin-top: 20px;*/
+    transform: translateY(30px);
+}
