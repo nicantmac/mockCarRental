@@ -1,0 +1,35 @@
+#header-link-navbar{
+    background-color: transparent;
+    margin-top: 30px;
+    /* height: 35px; */
+}
+
+.header-linked-list {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox to make the list horizontal */
+    justify-content: center; /* Center the navigation list */
+    /* scroll-margin: 70px; */
+}
+
+.header-linked-list a {
+    margin: 20px;
+    font-family: "Apple SD Gothic Neo", sans-serif;
+    padding: 15px 25px; /* Add padding around the links */
+    color: black;
+    text-decoration: none; /* Remove underline from links */
+    text-align: center;
+    background-color: transparent;
+    transition: 0.2s ease-in;
+}
+
+.header-linked-list a:hover {
+    background-color: transparent; /* Change background on hover */
+    border-radius: 50px;
+    border-width: thick;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.4s ease-in-out;
+    /*transition: transform 0.3s ease-in-out;*/
+    /*animation: hoverAnimation 0.5s forwards;*/
+}
